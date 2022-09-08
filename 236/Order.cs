@@ -540,6 +540,7 @@ namespace _236
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //chuyển bàn
             int bantruoc = (int)numericUpDown3.Value;
             int bansau = (int)numericUpDown4.Value;
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_ThanhToanBan @bantruoc", new object[] { bantruoc });
@@ -562,6 +563,7 @@ namespace _236
 
         private void button9_Click(object sender, EventArgs e)
         {
+            //thêm hàng nhập
             SqlConnection con = Order.connect();
             DateTime dt = DateTime.Now;
             string s = dt.ToString();
@@ -576,6 +578,7 @@ namespace _236
 
         private void button7_Click(object sender, EventArgs e)
         {
+            //sửa DS hàng nhập
             SqlConnection con = Order.connect();
             DateTime dt = DateTime.Now;
             string s = dt.ToString();
@@ -591,6 +594,7 @@ namespace _236
 
         private void button8_Click(object sender, EventArgs e)
         {
+            //xóa hàng nhập
             DialogResult kq = MessageBox.Show("Bạn có chắc chắn không?", "Tiêu đề", MessageBoxButtons.YesNo);
             if (kq == System.Windows.Forms.DialogResult.Yes)
             {

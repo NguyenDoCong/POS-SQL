@@ -36,9 +36,9 @@ namespace _236
 
                 if (parameter != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] listP = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach (string item in listP)
                     {
                         if (item.Contains('@'))
                         {
@@ -70,9 +70,9 @@ namespace _236
 
                 if (parameter != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] listP = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach (string item in listP)
                     {
                         if (item.Contains('@'))
                         {
@@ -102,9 +102,9 @@ namespace _236
 
                 if (parameter != null)
                 {
-                    string[] listPara = query.Split(' ');
+                    string[] listP = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach (string item in listP)
                     {
                         if (item.Contains('@'))
                         {
