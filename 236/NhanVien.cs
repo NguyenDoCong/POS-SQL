@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace _236
 {
-    public partial class Order : Form
+    public partial class NhanVien : Form
     {
-        public Order()
+        public NhanVien()
         {
             InitializeComponent();
             NapDSBan();
@@ -37,7 +37,7 @@ namespace _236
 
         public DataTable hienthi()
         {
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             con.Open();
             SqlCommand cm = new SqlCommand("select ID,TenDoUong as 'Tên Đồ Uống', SoLuong as 'Số Lượng', Ngay as Ngày, TrangThai as 'Trạng Thái', Ban as Bàn from dsgoido order by Ngay desc", con);
             SqlDataAdapter da = new SqlDataAdapter(cm);
@@ -48,7 +48,7 @@ namespace _236
         }
         public DataTable hienthiNhap()
         {
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             con.Open();
             SqlCommand cm = new SqlCommand("select * from DSNhap order by Ngay desc", con);
             SqlDataAdapter da = new SqlDataAdapter(cm);
@@ -85,7 +85,7 @@ namespace _236
 
         public DataTable chonNguyenLieu()
         {
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             con.Open();
             SqlCommand cm = new SqlCommand("select * from DSNguyenLieu", con);
             SqlDataAdapter da = new SqlDataAdapter(cm);
@@ -98,7 +98,7 @@ namespace _236
         #endregion
         private void Order_Load(object sender, EventArgs e)
         {
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView1.DataSource = ql.hienthi();
             //dataGridView2.DataSource = ql.hienthiOrder();
             textBox2.Enabled = false;
@@ -199,14 +199,14 @@ namespace _236
         {
             //them
             //Đang gọi đồ
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             int b = System.Int32.Parse(numericUpDown2.Text);
             string s = textBox3.ToString();
             if (ktbantrong(b))
             {
                 if (!ktdouong(b))
                 {
-                    SqlConnection con = Order.connect();
+                    SqlConnection con = NhanVien.connect();
                     //string sql = "insert into DSban values(N'" + comboBox1.Text + "','" + textBox1.Text + "','" + dateTimePicker1.Value + "')";
                     string sql = "USP_ThemDoUong @TenDoUong , @SoLuong, @Ban";
                     SqlCommand cmd = new SqlCommand(sql, con);
@@ -229,7 +229,7 @@ namespace _236
                 }
                 if (ktdouong(b))
                 {
-                    SqlConnection con = Order.connect();
+                    SqlConnection con = NhanVien.connect();
                     string sql = "USP_CapNhatDoUong @TenDoUong , @SoLuong, @Ban";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@TenDoUong", textBox3.Text);
@@ -250,7 +250,7 @@ namespace _236
             {
                 if (!ktdouong(b))
                 {
-                    SqlConnection con = Order.connect();
+                    SqlConnection con = NhanVien.connect();
                     string sql = "USP_ThemDoUong @TenDoUong , @SoLuong, @Ban";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@TenDoUong", textBox3.Text);
@@ -266,7 +266,7 @@ namespace _236
                 }
                 else if (ktdouong(b))
                 {
-                    SqlConnection con = Order.connect();
+                    SqlConnection con = NhanVien.connect();
                     string sql = "USP_CapNhatDoUong @TenDoUong , @SoLuong, @Ban";
                     SqlCommand cmd = new SqlCommand(sql, con);
                     cmd.Parameters.AddWithValue("@TenDoUong", textBox3.Text);
@@ -295,13 +295,13 @@ namespace _236
 
         private void button2_Click(object sender, EventArgs e)
         {
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             string sql = "update dsgoido set TenDoUong=N'" + textBox4.Text + "',SoLuong='" + numericUpDown5.Text + "',Ban='" + numericUpDown6.Text + "' where ID='" + textBox2.Text + "'";
             SqlCommand cmd = new SqlCommand(sql, con);
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView1.DataSource = ql.hienthi();
         }
 
@@ -310,13 +310,13 @@ namespace _236
             DialogResult kq = MessageBox.Show("Bạn có chắc chắn không?", "Tiêu đề", MessageBoxButtons.YesNo);
             if (kq == System.Windows.Forms.DialogResult.Yes)
             {
-                SqlConnection con = Order.connect();
+                SqlConnection con = NhanVien.connect();
                 string sql = "delete from dsgoido where ID='" + textBox2.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Order ql = new Order();
+                NhanVien ql = new NhanVien();
                 dataGridView1.DataSource = ql.hienthi();
             }
         }
@@ -451,7 +451,7 @@ namespace _236
         {
             string tenDoUong = ((sender as Button).Tag as DoUong).Ten;
             textBox3.Text = tenDoUong;
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView2.DataSource = ql.hienthiOrder();
         }
 
@@ -461,7 +461,7 @@ namespace _236
             idban = ((sender as Button).Tag as Ban).ID;
             numericUpDown3.Value = idban;
             DataTable data = KetNoiDuLieu.Instance.ExecuteQuery("USP_XemBan @idban", new object[] { idban});
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView2.DataSource = data;
         }
         void NapDSBan()
@@ -511,7 +511,7 @@ namespace _236
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_TruNguyenLieu");
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_HoanThanhOrder");
             string sql = "USP_DatBan @idban";
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@idban", numericUpDown2.Text);
             con.Open();
@@ -520,7 +520,7 @@ namespace _236
             NapDSBan();
             //int idban = System.Int32.Parse(numericUpDown2.Text);
             //KetNoiDuLieu.Instance.ExecuteNonQuery("USP_DatBan @idban", new object[] { idban });
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView1.DataSource = ql.hienthi();
             dataGridView2.DataSource = ql.hienthiOrder();
         }
@@ -531,7 +531,7 @@ namespace _236
             int idban = System.Int32.Parse(numericUpDown3.Text);
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_ThanhToan @idban", new object[] { idban });
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_ThanhToanBan @idban", new object[] { idban });
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             DataTable dt = KetNoiDuLieu.Instance.ExecuteQuery("USP_XemBan @idban", new object[] { idban });
             dataGridView1.DataSource = ql.hienthi();
             dataGridView2.DataSource = dt;
@@ -546,7 +546,7 @@ namespace _236
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_ThanhToanBan @bantruoc", new object[] { bantruoc });
             KetNoiDuLieu.Instance.ExecuteNonQuery("USP_DatBan @bansau", new object[] { bansau });
             string sql = "USP_DoiBan @bantruoc, @bansau";
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             SqlCommand cmd = new SqlCommand(sql, con);
             cmd.Parameters.AddWithValue("@bantruoc", numericUpDown3.Value);
             cmd.Parameters.AddWithValue("@bansau", numericUpDown4.Value);
@@ -564,7 +564,7 @@ namespace _236
         private void button9_Click(object sender, EventArgs e)
         {
             //thêm hàng nhập
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             DateTime dt = DateTime.Now;
             string s = dt.ToString();
             string sql = "insert into DSNhap values(N'" + comboBox1.Text + "','" + textBox6.Text + "','" + s + "')";
@@ -572,14 +572,14 @@ namespace _236
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView3.DataSource = ql.hienthiNhap();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             //sửa DS hàng nhập
-            SqlConnection con = Order.connect();
+            SqlConnection con = NhanVien.connect();
             DateTime dt = DateTime.Now;
             string s = dt.ToString();
             string t = comboBox1.Text;
@@ -588,7 +588,7 @@ namespace _236
             con.Open();
             cmd.ExecuteNonQuery();
             con.Close();
-            Order ql = new Order();
+            NhanVien ql = new NhanVien();
             dataGridView3.DataSource = ql.hienthiNhap();
         }
 
@@ -598,18 +598,73 @@ namespace _236
             DialogResult kq = MessageBox.Show("Bạn có chắc chắn không?", "Tiêu đề", MessageBoxButtons.YesNo);
             if (kq == System.Windows.Forms.DialogResult.Yes)
             {
-                SqlConnection con = Order.connect();
+                SqlConnection con = NhanVien.connect();
                 string sql = "delete from DSNhap where ID='" + textBox5.Text + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
-                Order ql = new Order();
+                NhanVien ql = new NhanVien();
                 dataGridView3.DataSource = ql.hienthiNhap();
             }
         }
 
+        private void tabPage10_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void doimatkhau()
+        {
+            SqlConnection con = DangNhap.connect();
+            //con.Open();
+            //string sql = "select * from DSNV where Username='" + textBox7.Text + "' and Password='" + textBox8.Text + "'";
+            //SqlCommand cm = new SqlCommand(sql, con);
+            //cm.ExecuteNonQuery();
+            //SqlDataAdapter da = new SqlDataAdapter(cm);
+            ////ComboBox cb = new ComboBox();
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+
+            ///*            DataGridView dg = new DataGridView();
+            //            dg.DataSource = dt;*/
+
+            //foreach (DataRow row in dt.Rows)
+            //{
+            //    string id = row["id"].ToString();
+            //}
+            //int t = 0;
+            if (textBox9.Text.Equals(textBox10.Text))
+            {
+                string sql2 = "update DSNV set Password='" + textBox9.Text + "' where Username='" + textBox7.Text + "'";
+                SqlCommand cm2 = new SqlCommand(sql2, con);
+                con.Open();
+
+                t = (Int32)cm.ExecuteNonQuery();
+                con.Close();
+
+                textBox7.Clear();
+                textBox8.Clear();
+                textBox9.Clear();
+                textBox10.Clear();
+            }
+
+                if (t>0)
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                else MessageBox.Show("Nhập sai, vui lòng nhập lại");
+
+            
+
+            //con.Close();
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            doimatkhau();
+        }
     }
 
 }

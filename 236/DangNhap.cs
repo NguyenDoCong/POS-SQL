@@ -44,8 +44,8 @@ namespace _236
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            DataGridView dg = new DataGridView();
-            dg.DataSource = dt;
+/*            DataGridView dg = new DataGridView();
+            dg.DataSource = dt;*/
 
 
             foreach (DataRow row in dt.Rows)
@@ -62,7 +62,7 @@ namespace _236
             }
             else if (s.Contains("NV"))
             {
-                Order ql = new Order();
+                NhanVien ql = new NhanVien();
                 ql.ShowDialog();
             }
             else if (s.Contains("Thu kho"))
