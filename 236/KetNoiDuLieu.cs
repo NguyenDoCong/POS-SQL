@@ -12,21 +12,23 @@ namespace _236
     {
         //public SqlConnection kndl = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=236;Integrated Security=True");
 
-        private static KetNoiDuLieu instance; // Ctrl + R + E
+        //private static KetNoiDuLieu instance; // Ctrl + R + E
 
-        public static KetNoiDuLieu Instance
-        {
-            get { if (instance == null) instance = new KetNoiDuLieu(); return KetNoiDuLieu.instance; }
-            private set { KetNoiDuLieu.instance = value; }
-        }
+        //public static KetNoiDuLieu Instance
+        //{
+        //    get { if (instance == null) instance = new KetNoiDuLieu(); return KetNoiDuLieu.instance; }
+        //    private set { KetNoiDuLieu.instance = value; }
+        //}
 
         private KetNoiDuLieu() { }
 
-        private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=236;Integrated Security=True";
+        //private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=236;Integrated Security=True";
 
-        public DataTable ExecuteQuery(string query, object[] parameter = null)
+        public static DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
+
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=236;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
@@ -58,9 +60,11 @@ namespace _236
             return data;
         }
 
-        public int ExecuteNonQuery(string query, object[] parameter = null)
+        public static int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
+
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=236;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
@@ -90,9 +94,11 @@ namespace _236
             return data;
         }
 
-        public object ExecuteScalar(string query, object[] parameter = null)
+        public static object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;
+
+            string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=236;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {

@@ -10,26 +10,26 @@ namespace _236
     
         public class HienThiBan
     {
-        private static HienThiBan instance;
+        //private static HienThiBan instance;
 
-        public static HienThiBan Instance
-        {
-            get { if (instance == null) instance = new HienThiBan(); return HienThiBan.instance; }
-            private set { HienThiBan.instance = value; }
-        }
+        //public static HienThiBan Instance
+        //{
+        //    get { if (instance == null) instance = new HienThiBan(); return HienThiBan.instance; }
+        //    private set { HienThiBan.instance = value; }
+        //}
 
         public static int ChieuRong = 90;
         public static int ChieuCao = 90;
 
         private HienThiBan() { }
 
-        public List<Ban> HienThiDSBan()
+        public static List<Ban> HienThiDSBan()
         {
             //var kn = new KetNoiDuLieu();
 
             List<Ban> dsBan = new List<Ban>();
 
-            DataTable data = KetNoiDuLieu.Instance.ExecuteQuery("USP_DanhSachBan");
+            DataTable data = KetNoiDuLieu.ExecuteQuery("USP_DanhSachBan");
 
             //DataTable data = kn.taobang("SELECT * FROM Ban");
 
