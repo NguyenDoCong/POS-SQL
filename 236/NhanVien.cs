@@ -427,12 +427,25 @@ namespace _236
         //{
         //    NhanVien n = new NhanVien();
         //    b.Width = HienThiDoUong.ChieuRong;
-        //        b.Height = HienThiDoUong.ChieuCao;
+        //    b.Height = HienThiDoUong.ChieuCao;
         //    b.Text = du.Ten + Environment.NewLine + du.Gia;
-        //    b.Click += n.DoUong_Click;
+        //    //b.Click += n.DoUong_Click;
         //    b.Tag = du;
         //}
+        //public NhanVien nv = new NhanVien();
+        class bDU:Button
+        {
+            private NhanVien nv;
 
+            public void set(DoUong du)
+            {
+                Width = HienThiDoUong.ChieuRong;
+                Height = HienThiDoUong.ChieuCao;
+                this.Text = du.Ten + Environment.NewLine + du.Gia;
+                //this.Click += nv.DoUong_Click;            
+                this.Tag = du;
+            }
+        }
         void napDSNuocEp()
         {
             //NhanVien.HienThiLoaiDoUong(flowLayoutPanel1, "USP_DanhSachNuocEp");
@@ -442,18 +455,21 @@ namespace _236
 
             foreach (DoUong item in DSDoUong)
             {
-                Button btn = new Button()
-                {
-                    Width = HienThiDoUong.ChieuRong,
-                    Height = HienThiDoUong.ChieuCao
-                };
+                bDU bne = new bDU();
+                bne.set(item);
+                //Button btn = new Button()
+                //{
+                //    Width = HienThiDoUong.ChieuRong,
+                //    Height = HienThiDoUong.ChieuCao
+                //};
 
-                btn.Text = item.Ten + Environment.NewLine + item.Gia;
-                btn.Click += DoUong_Click;
-                btn.Tag = item;
+                //btn.Text = item.Ten + Environment.NewLine + item.Gia;
+                //btn.Click += DoUong_Click;
+                //btn.Tag = item;
                 //bDU(item, btn);
+                bne.Click += DoUong_Click;
 
-                flowLayoutPanel1.Controls.Add(btn);
+                flowLayoutPanel1.Controls.Add(bne);
             }
         }
 
@@ -465,16 +481,19 @@ namespace _236
 
             foreach (DoUong item in DSDoUong)
             {
-                Button btn = new Button()
-                {
-                    Width = HienThiDoUong.ChieuRong,
-                    Height = HienThiDoUong.ChieuCao
-                };
-                btn.Text = item.Ten + Environment.NewLine + item.Gia;
-                btn.Click += DoUong_Click;
-                btn.Tag = item;
+                bDU bcf = new bDU();
+                bcf.set(item);
+                bcf.Click += DoUong_Click;
+                //Button btn = new Button()
+                //{
+                //    Width = HienThiDoUong.ChieuRong,
+                //    Height = HienThiDoUong.ChieuCao
+                //};
+                //btn.Text = item.Ten + Environment.NewLine + item.Gia;
+                //btn.Click += DoUong_Click;
+                //btn.Tag = item;
 
-                fLPCaPhe.Controls.Add(btn);
+                fLPCaPhe.Controls.Add(bcf);
             }
         }
 
@@ -486,16 +505,19 @@ namespace _236
 
             foreach (DoUong item in DSDoUong)
             {
-                Button btn = new Button()
-                {
-                    Width = HienThiDoUong.ChieuRong,
-                    Height = HienThiDoUong.ChieuCao
-                };
-                btn.Text = item.Ten + Environment.NewLine + item.Gia;
-                btn.Click += DoUong_Click;
-                btn.Tag = item;
+                bDU bsc = new bDU();
+                bsc.set(item);
+                bsc.Click += DoUong_Click;
+                //Button btn = new Button()
+                //{
+                //    Width = HienThiDoUong.ChieuRong,
+                //    Height = HienThiDoUong.ChieuCao
+                //};
+                //btn.Text = item.Ten + Environment.NewLine + item.Gia;
+                //btn.Click += DoUong_Click;
+                //btn.Tag = item;
 
-                fLPSuaChua.Controls.Add(btn);
+                fLPSuaChua.Controls.Add(bsc);
             }
         }
 
@@ -507,16 +529,19 @@ namespace _236
 
             foreach (DoUong item in DSDoUong)
             {
-                Button btn = new Button()
-                {
-                    Width = HienThiDoUong.ChieuRong,
-                    Height = HienThiDoUong.ChieuCao
-                };
-                btn.Text = item.Ten + Environment.NewLine + item.Gia;
-                btn.Click += DoUong_Click;
-                btn.Tag = item;
+                bDU bst = new bDU();
+                bst.set(item);
+                bst.Click += DoUong_Click;
+                //Button btn = new Button()
+                //{
+                //    Width = HienThiDoUong.ChieuRong,
+                //    Height = HienThiDoUong.ChieuCao
+                //};
+                //btn.Text = item.Ten + Environment.NewLine + item.Gia;
+                //btn.Click += DoUong_Click;
+                //btn.Tag = item;
 
-                fLPSinhTo.Controls.Add(btn);
+                fLPSinhTo.Controls.Add(bst);
             }
         }
 
@@ -528,16 +553,19 @@ namespace _236
 
             foreach (DoUong item in DSDoUong)
             {
-                Button btn = new Button()
-                {
-                    Width = HienThiDoUong.ChieuRong,
-                    Height = HienThiDoUong.ChieuCao
-                };
-                btn.Text = item.Ten + Environment.NewLine + item.Gia;
-                btn.Click += DoUong_Click;
-                btn.Tag = item;
+                bDU bt = new bDU();
+                bt.set(item);
+                bt.Click += DoUong_Click;
+                //Button btn = new Button()
+                //{
+                //    Width = HienThiDoUong.ChieuRong,
+                //    Height = HienThiDoUong.ChieuCao
+                //};
+                //btn.Text = item.Ten + Environment.NewLine + item.Gia;
+                //btn.Click += DoUong_Click;
+                //btn.Tag = item;
 
-                fLPTra.Controls.Add(btn);
+                fLPTra.Controls.Add(bt);
             }
         }
 
@@ -549,16 +577,19 @@ namespace _236
 
             foreach (DoUong item in DSDoUong)
             {
-                Button btn = new Button()
-                {
-                    Width = HienThiDoUong.ChieuRong,
-                    Height = HienThiDoUong.ChieuCao
-                };
-                btn.Text = item.Ten + Environment.NewLine + item.Gia;
-                btn.Click += DoUong_Click;
-                btn.Tag = item;
+                bDU bb = new bDU();
+                bb.set(item);
+                bb.Click += DoUong_Click;
+                //Button btn = new Button()
+                //{
+                //    Width = HienThiDoUong.ChieuRong,
+                //    Height = HienThiDoUong.ChieuCao
+                //};
+                //btn.Text = item.Ten + Environment.NewLine + item.Gia;
+                //btn.Click += DoUong_Click;
+                //btn.Tag = item;
 
-                fLPBia.Controls.Add(btn);
+                fLPBia.Controls.Add(bb);
             }
         }
 
