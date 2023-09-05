@@ -29,17 +29,19 @@ namespace _236
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea19 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend19 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea20 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend20 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea21 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend21 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -51,6 +53,8 @@ namespace _236
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -61,6 +65,19 @@ namespace _236
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -96,28 +113,21 @@ namespace _236
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBox20 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox23 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -131,8 +141,6 @@ namespace _236
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -153,6 +161,14 @@ namespace _236
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.textBox23);
+            this.tabPage2.Controls.Add(this.label23);
+            this.tabPage2.Controls.Add(this.textBox22);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.textBox21);
+            this.tabPage2.Controls.Add(this.label21);
+            this.tabPage2.Controls.Add(this.textBox20);
+            this.tabPage2.Controls.Add(this.label20);
             this.tabPage2.Controls.Add(this.textBox18);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.textBox10);
@@ -172,6 +188,22 @@ namespace _236
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "QL đồ uống";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // textBox18
+            // 
+            this.textBox18.Location = new System.Drawing.Point(429, 16);
+            this.textBox18.Name = "textBox18";
+            this.textBox18.Size = new System.Drawing.Size(100, 20);
+            this.textBox18.TabIndex = 22;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(383, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(27, 13);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Loại";
             // 
             // textBox10
             // 
@@ -229,9 +261,9 @@ namespace _236
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 42);
+            this.dataGridView2.Location = new System.Drawing.Point(19, 114);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(675, 232);
+            this.dataGridView2.Size = new System.Drawing.Size(675, 160);
             this.dataGridView2.TabIndex = 14;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -280,6 +312,22 @@ namespace _236
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "QL nguyên liệu";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(444, 16);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(100, 20);
+            this.textBox19.TabIndex = 32;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(389, 19);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(49, 13);
+            this.label19.TabIndex = 31;
+            this.label19.Text = "Số lượng";
             // 
             // textBox5
             // 
@@ -367,6 +415,131 @@ namespace _236
             this.label11.Size = new System.Drawing.Size(26, 13);
             this.label11.TabIndex = 21;
             this.label11.Text = "Tên";
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.textBox17);
+            this.tabPage7.Controls.Add(this.label17);
+            this.tabPage7.Controls.Add(this.textBox14);
+            this.tabPage7.Controls.Add(this.label14);
+            this.tabPage7.Controls.Add(this.textBox15);
+            this.tabPage7.Controls.Add(this.button15);
+            this.tabPage7.Controls.Add(this.button16);
+            this.tabPage7.Controls.Add(this.button17);
+            this.tabPage7.Controls.Add(this.dataGridView8);
+            this.tabPage7.Controls.Add(this.textBox16);
+            this.tabPage7.Controls.Add(this.label15);
+            this.tabPage7.Controls.Add(this.label16);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(713, 309);
+            this.tabPage7.TabIndex = 8;
+            this.tabPage7.Text = "QL công thức";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(494, 9);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(56, 20);
+            this.textBox17.TabIndex = 42;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(425, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(49, 13);
+            this.label17.TabIndex = 41;
+            this.label17.Text = "Số lượng";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(42, 9);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(33, 20);
+            this.textBox14.TabIndex = 40;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(18, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(18, 13);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "ID";
+            // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(137, 9);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(100, 20);
+            this.textBox15.TabIndex = 38;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(182, 276);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 37;
+            this.button15.Text = "Xóa";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            // 
+            // button16
+            // 
+            this.button16.Location = new System.Drawing.Point(101, 276);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(75, 23);
+            this.button16.TabIndex = 36;
+            this.button16.Text = "Sửa";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(20, 276);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(75, 23);
+            this.button17.TabIndex = 35;
+            this.button17.Text = "Thêm";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(21, 35);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.Size = new System.Drawing.Size(673, 235);
+            this.dataGridView8.TabIndex = 34;
+            this.dataGridView8.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView8_CellContentClick);
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(336, 9);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(56, 20);
+            this.textBox16.TabIndex = 33;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(267, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(63, 13);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "Nguyên liệu";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(105, 12);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(26, 13);
+            this.label16.TabIndex = 31;
+            this.label16.Text = "Tên";
             // 
             // tabPage4
             // 
@@ -614,18 +787,18 @@ namespace _236
             // 
             // chart1
             // 
-            chartArea19.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea19);
-            legend19.Enabled = false;
-            legend19.Name = "Legend1";
-            this.chart1.Legends.Add(legend19);
+            chartArea10.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea10);
+            legend10.Enabled = false;
+            legend10.Name = "Legend1";
+            this.chart1.Legends.Add(legend10);
             this.chart1.Location = new System.Drawing.Point(324, 44);
             this.chart1.Name = "chart1";
-            series19.ChartArea = "ChartArea1";
-            series19.IsVisibleInLegend = false;
-            series19.Legend = "Legend1";
-            series19.Name = "Bán Ra";
-            this.chart1.Series.Add(series19);
+            series10.ChartArea = "ChartArea1";
+            series10.IsVisibleInLegend = false;
+            series10.Legend = "Legend1";
+            series10.Name = "Bán Ra";
+            this.chart1.Series.Add(series10);
             this.chart1.Size = new System.Drawing.Size(386, 249);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -672,17 +845,17 @@ namespace _236
             // 
             // chart3
             // 
-            chartArea20.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea20);
-            legend20.Enabled = false;
-            legend20.Name = "Legend1";
-            this.chart3.Legends.Add(legend20);
+            chartArea11.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea11);
+            legend11.Enabled = false;
+            legend11.Name = "Legend1";
+            this.chart3.Legends.Add(legend11);
             this.chart3.Location = new System.Drawing.Point(323, 44);
             this.chart3.Name = "chart3";
-            series20.ChartArea = "ChartArea1";
-            series20.Legend = "Legend1";
-            series20.Name = "Mua Vào";
-            this.chart3.Series.Add(series20);
+            series11.ChartArea = "ChartArea1";
+            series11.Legend = "Legend1";
+            series11.Name = "Mua Vào";
+            this.chart3.Series.Add(series11);
             this.chart3.Size = new System.Drawing.Size(387, 242);
             this.chart3.TabIndex = 42;
             this.chart3.Text = "chart3";
@@ -710,17 +883,17 @@ namespace _236
             // 
             // chart2
             // 
-            chartArea21.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea21);
-            legend21.Enabled = false;
-            legend21.Name = "Legend1";
-            this.chart2.Legends.Add(legend21);
+            chartArea12.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea12);
+            legend12.Enabled = false;
+            legend12.Name = "Legend1";
+            this.chart2.Legends.Add(legend12);
             this.chart2.Location = new System.Drawing.Point(322, 45);
             this.chart2.Name = "chart2";
-            series21.ChartArea = "ChartArea1";
-            series21.Legend = "Legend1";
-            series21.Name = "Lợi Nhuận";
-            this.chart2.Series.Add(series21);
+            series12.ChartArea = "ChartArea1";
+            series12.Legend = "Legend1";
+            series12.Name = "Lợi Nhuận";
+            this.chart2.Series.Add(series12);
             this.chart2.Size = new System.Drawing.Size(385, 248);
             this.chart2.TabIndex = 1;
             this.chart2.Text = "chart2";
@@ -734,162 +907,71 @@ namespace _236
             this.dataGridView7.Size = new System.Drawing.Size(301, 248);
             this.dataGridView7.TabIndex = 0;
             // 
-            // tabPage7
+            // label20
             // 
-            this.tabPage7.Controls.Add(this.textBox17);
-            this.tabPage7.Controls.Add(this.label17);
-            this.tabPage7.Controls.Add(this.textBox14);
-            this.tabPage7.Controls.Add(this.label14);
-            this.tabPage7.Controls.Add(this.textBox15);
-            this.tabPage7.Controls.Add(this.button15);
-            this.tabPage7.Controls.Add(this.button16);
-            this.tabPage7.Controls.Add(this.button17);
-            this.tabPage7.Controls.Add(this.dataGridView8);
-            this.tabPage7.Controls.Add(this.textBox16);
-            this.tabPage7.Controls.Add(this.label15);
-            this.tabPage7.Controls.Add(this.label16);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(713, 309);
-            this.tabPage7.TabIndex = 8;
-            this.tabPage7.Text = "QL công thức";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(16, 56);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(72, 13);
+            this.label20.TabIndex = 23;
+            this.label20.Text = "Nguyên liệu 1";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
-            // textBox14
+            // textBox20
             // 
-            this.textBox14.Location = new System.Drawing.Point(42, 9);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(33, 20);
-            this.textBox14.TabIndex = 40;
+            this.textBox20.Location = new System.Drawing.Point(98, 52);
+            this.textBox20.Name = "textBox20";
+            this.textBox20.Size = new System.Drawing.Size(100, 20);
+            this.textBox20.TabIndex = 24;
+            this.textBox20.TextChanged += new System.EventHandler(this.textBox20_TextChanged);
             // 
-            // label14
+            // label21
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(18, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(18, 13);
-            this.label14.TabIndex = 39;
-            this.label14.Text = "ID";
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(246, 56);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(72, 13);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "Nguyên liệu 2";
             // 
-            // textBox15
+            // textBox21
             // 
-            this.textBox15.Location = new System.Drawing.Point(137, 9);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(100, 20);
-            this.textBox15.TabIndex = 38;
+            this.textBox21.Location = new System.Drawing.Point(337, 52);
+            this.textBox21.Name = "textBox21";
+            this.textBox21.Size = new System.Drawing.Size(100, 20);
+            this.textBox21.TabIndex = 26;
             // 
-            // button15
+            // label22
             // 
-            this.button15.Location = new System.Drawing.Point(182, 276);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 37;
-            this.button15.Text = "Xóa";
-            this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(488, 56);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(72, 13);
+            this.label22.TabIndex = 27;
+            this.label22.Text = "Nguyên liệu 3";
             // 
-            // button16
+            // textBox22
             // 
-            this.button16.Location = new System.Drawing.Point(101, 276);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(75, 23);
-            this.button16.TabIndex = 36;
-            this.button16.Text = "Sửa";
-            this.button16.UseVisualStyleBackColor = true;
-            this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.textBox22.Location = new System.Drawing.Point(579, 52);
+            this.textBox22.Name = "textBox22";
+            this.textBox22.Size = new System.Drawing.Size(100, 20);
+            this.textBox22.TabIndex = 28;
             // 
-            // button17
+            // label23
             // 
-            this.button17.Location = new System.Drawing.Point(20, 276);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(75, 23);
-            this.button17.TabIndex = 35;
-            this.button17.Text = "Thêm";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(22, 89);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(58, 13);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "Số lượng 1";
             // 
-            // dataGridView8
+            // textBox23
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(21, 35);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.Size = new System.Drawing.Size(673, 235);
-            this.dataGridView8.TabIndex = 34;
-            this.dataGridView8.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView8_CellContentClick);
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(336, 9);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(56, 20);
-            this.textBox16.TabIndex = 33;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(267, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 13);
-            this.label15.TabIndex = 32;
-            this.label15.Text = "Nguyên liệu";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(105, 12);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(26, 13);
-            this.label16.TabIndex = 31;
-            this.label16.Text = "Tên";
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(494, 9);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(56, 20);
-            this.textBox17.TabIndex = 42;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(425, 12);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 13);
-            this.label17.TabIndex = 41;
-            this.label17.Text = "Số lượng";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(383, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(27, 13);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Loại";
-            // 
-            // textBox18
-            // 
-            this.textBox18.Location = new System.Drawing.Point(429, 16);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(100, 20);
-            this.textBox18.TabIndex = 22;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(389, 19);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 13);
-            this.label19.TabIndex = 31;
-            this.label19.Text = "Số lượng";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(444, 16);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(100, 20);
-            this.textBox19.TabIndex = 32;
+            this.textBox23.Location = new System.Drawing.Point(98, 85);
+            this.textBox23.Name = "textBox23";
+            this.textBox23.Size = new System.Drawing.Size(100, 20);
+            this.textBox23.TabIndex = 30;
             // 
             // QL
             // 
@@ -908,6 +990,9 @@ namespace _236
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
@@ -923,9 +1008,6 @@ namespace _236
             this.tabPage8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1006,6 +1088,14 @@ namespace _236
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox22;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox21;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox textBox20;
+        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.Label label23;
     }
 }
 

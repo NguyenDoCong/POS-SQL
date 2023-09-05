@@ -22,11 +22,11 @@ namespace _236
             napDSSuaChua();
             napDSSinhTo();
             napDSTra();
-            napDSBia();  
+            napDSBia();
 
         }
 
-        
+
         #region "Ket Noi"
         //KetNoiDuLieu kn = new KetNoiDuLieu();
         public static SqlConnection connect()
@@ -272,13 +272,13 @@ namespace _236
         #endregion
 
         #region goi do
-        public void ThemDoUong (string TenDoUong, int SoLuong)
+        public void ThemDoUong(string TenDoUong, int SoLuong)
         {
-            KetNoiDuLieu.ExecuteNonQuery("USP_ThemDoUong @TenDoUong , @SoLuong", new object[] { TenDoUong, SoLuong});
+            KetNoiDuLieu.ExecuteNonQuery("USP_ThemDoUong @TenDoUong , @SoLuong", new object[] { TenDoUong, SoLuong });
         }
 
         public bool ktbantrong(int b)
-        {            
+        {
             DataTable data = KetNoiDuLieu.ExecuteQuery("SELECT * FROM Ban WHERE ID = " + b + " AND TrangThai=N'Trống'");
             if (data.Rows.Count > 0)
                 return true;
@@ -287,7 +287,7 @@ namespace _236
 
         public bool ktdouong(int b)
         {
-            DataTable data = KetNoiDuLieu.ExecuteQuery("SELECT * FROM DSGoiDo WHERE TenDoUong = N'" + textBox3.Text + "' AND Ban=" + b+ " AND TrangThai!=N'Đã thanh toán'");
+            DataTable data = KetNoiDuLieu.ExecuteQuery("SELECT * FROM DSGoiDo WHERE TenDoUong = N'" + textBox3.Text + "' AND Ban=" + b + " AND TrangThai!=N'Đã thanh toán'");
             if (data.Rows.Count > 0)
                 return true;
             return false;
@@ -318,8 +318,8 @@ namespace _236
                     //con.Open();
                     //cmd.ExecuteNonQuery();
                     //con.Close();
-                    
-                    KetNoiDuLieu.ExecuteNonQuery("USP_ThemDoUong @TenDoUong , @SoLuong , @Ban", new object[] { s, a, b});
+
+                    KetNoiDuLieu.ExecuteNonQuery("USP_ThemDoUong @TenDoUong , @SoLuong , @Ban", new object[] { s, a, b });
                     //object tdu = textBox3.Text;
                     //int t = System.Int32.Parse(textBox1.Text);
                     //string s = textBox3.ToString();
@@ -392,7 +392,7 @@ namespace _236
             }
             textBox3.Text = "";
             numericUpDown1.Value = 1;
-            numericUpDown2.Value=1;
+            numericUpDown2.Value = 1;
 
         }
 
@@ -433,7 +433,7 @@ namespace _236
         //    b.Tag = du;
         //}
         //public NhanVien nv = new NhanVien();
-        class bDU:Button
+        class bDU : Button
         {
             private NhanVien nv;
 
@@ -606,7 +606,7 @@ namespace _236
         {
             idban = ((sender as Button).Tag as Ban).ID;
             numericUpDown3.Value = idban;
-            DataTable data = KetNoiDuLieu.ExecuteQuery("USP_XemBan @idban", new object[] { idban});
+            DataTable data = KetNoiDuLieu.ExecuteQuery("USP_XemBan @idban", new object[] { idban });
             //NhanVien ql = new NhanVien();
             dataGridView2.DataSource = data;
         }
@@ -622,9 +622,10 @@ namespace _236
 
             foreach (Ban item in dsBan)
             {
-                Button btn = new Button() 
-                { 
-                    Width = HienThiBan.ChieuRong, Height = HienThiBan.ChieuCao 
+                Button btn = new Button()
+                {
+                    Width = HienThiBan.ChieuRong,
+                    Height = HienThiBan.ChieuCao
                 };
                 btn.Text = item.Ten + Environment.NewLine + item.TrangThai;
                 btn.Click += Ban_Click;
@@ -664,7 +665,7 @@ namespace _236
             //con.Open();
             //cmd.ExecuteNonQuery();
             //con.Close();
-            KetNoiDuLieu.ExecuteNonQuery("USP_DatBan @idban", new object[] { n} );
+            KetNoiDuLieu.ExecuteNonQuery("USP_DatBan @idban", new object[] { n });
             NapDSBan();
             //int idban = System.Int32.Parse(numericUpDown2.Text);
             //KetNoiDuLieu.Instance.ExecuteNonQuery("USP_DatBan @idban", new object[] { idban });
@@ -699,9 +700,9 @@ namespace _236
             //cmd.Parameters.AddWithValue("@bantruoc", numericUpDown3.Value);
             //cmd.Parameters.AddWithValue("@bansau", numericUpDown4.Value);
             //con.Open();
-            
+
             //cmd.ExecuteNonQuery();
-            
+
             //con.Close();
             KetNoiDuLieu.ExecuteNonQuery("USP_DoiBan @bantruoc , @bansau", new object[] { bantruoc, bansau });
             DataTable data = KetNoiDuLieu.ExecuteQuery("USP_XemBan @bansau", new object[] { bansau });
@@ -711,7 +712,7 @@ namespace _236
             numericUpDown4.Value = 0;
         }
 
-       
+
 
         private void tabPage10_Click(object sender, EventArgs e)
         {
@@ -750,20 +751,20 @@ namespace _236
 
                 //t = (Int32)cm2.ExecuteNonQuery();
                 //con.Close();
-                t=KetNoiDuLieu.ExecuteNonQuery("update DSNV set Password='" + textBox9.Text + "' where Username='" + textBox7.Text + "'");
+                t = KetNoiDuLieu.ExecuteNonQuery("update DSNV set Password='" + textBox9.Text + "' where Username='" + textBox7.Text + "'");
                 textBox7.Clear();
                 textBox8.Clear();
                 textBox9.Clear();
                 textBox10.Clear();
             }
 
-                if (t>0)
-                {
-                    MessageBox.Show("Cập nhật thành công");
-                }
-                else MessageBox.Show("Nhập sai, vui lòng nhập lại");
+            if (t > 0)
+            {
+                MessageBox.Show("Cập nhật thành công");
+            }
+            else MessageBox.Show("Nhập sai, vui lòng nhập lại");
 
-            
+
 
             //con.Close();
 

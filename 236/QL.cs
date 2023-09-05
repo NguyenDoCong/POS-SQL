@@ -36,7 +36,7 @@ namespace _236
             //da.Fill(dt);
             //con.Close();
             //return dt;
-            DataTable data = KetNoiDuLieu.ExecuteQuery("select ID, TenDoUong as 'Tên Đồ Uống', Gia as Giá, Loai as Loại from DSDoUong order by Loai");
+            DataTable data = KetNoiDuLieu.ExecuteQuery("select ID, TenDoUong as 'Tên Đồ Uống', Gia as Giá, Loai as Loại, NguyenLieu1 as 'Nguyên Liệu 1', SoLuong1 as 'Số Lượng 1', NguyenLieu2 as 'Nguyên Liệu 2', SoLuong2 as 'Số Lượng 2', NguyenLieu3 as 'Nguyên Liệu 3', SoLuong3 as 'Số Lượng 3 ' from DSDoUong order by Loai");
             return data;
         }
 
@@ -352,7 +352,7 @@ namespace _236
             //cmd.ExecuteNonQuery();
             //con.Close();
             //QL ql = new QL();
-            KetNoiDuLieu.ExecuteNonQuery("update DSDoUong set TenDoUong='" + textBox7.Text + "',Gia='" + textBox4.Text + "',Loai='" + textBox18.Text + "' where ID='" + textBox10.Text + "'");
+            KetNoiDuLieu.ExecuteNonQuery("update DSDoUong set TenDoUong='" + textBox7.Text + "',Gia='" + textBox4.Text + "', NguyenLieu1='" + textBox20.Text + "', SoLuong1='" + textBox23.Text + "', Loai='" + textBox18.Text + "' where ID='" + textBox10.Text + "'");
             dataGridView2.DataSource = hienthiDoUong();
         }
 
@@ -642,10 +642,19 @@ namespace _236
 
             }
         }
-        #endregion
 
         #endregion
 
+        #endregion
 
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox20_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
